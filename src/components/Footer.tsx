@@ -64,7 +64,7 @@ export const Footer = () => {
           <div>
             <h4 className="text-lg font-display font-bold mb-8">Our Services</h4>
             <ul className="space-y-4 text-sm text-white/50">
-              {['CCTV Systems', 'Fire Alarms', 'Access Control', 'PA Systems', 'BMS Systems'].map((service) => (
+              {['CCTV Systems', 'Fire Alarms', 'Access Control', 'PA Systems', 'BMS Systems', 'Waterlekage' , 'VESDA Systems'].map((service) => (
                 <li key={service}>
                   <Link to="/services" className="hover:text-accent transition-colors">
                     {service}
@@ -79,7 +79,7 @@ export const Footer = () => {
             <ul className="space-y-6 text-sm text-white/50">
               <li className="flex gap-4">
                 <span className="text-accent">Add:</span>
-                <span> House No 116 Ground Floor V2 Security Solutions Nearby Kajal Tailor Or Jai Hind Public School Street Number 3 Surya Vihar Part II Sector 91 Faridabad Haryana 121013 India</span>
+                <span> House No 116 Ground Floor V2 Security Solutions Nearby Kajal Tailor Or Jai Hind Public School Street Number 3 Surya Vihar Part III Sector 91 Faridabad Haryana 121013 India</span>
               </li>
               <li className="flex gap-4">
                 <span className="text-accent">Mail:</span>
@@ -100,10 +100,10 @@ export const Footer = () => {
 
         <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-white/30 font-medium">
           <p>© 2026 V2 Security Solutions. All Rights Reserved.</p>
-          <p><a href="https://webworldhub.com" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">Designed by Web World Hub</a></p>
+          <p><a href="https://www.webworldhub.co.in/" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">Designed by Web World Hub</a></p>
           <div className="flex gap-8">
-            <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
+            <a >Privacy Policy</a>
+            <a >Terms of Service</a>
           </div>
         </div>
       </div>

@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { AnimatePresence, motion, useScroll, useSpring } from 'framer-motion';
 import { TopHeader } from './components/TopHeader';
@@ -13,6 +13,7 @@ import { Clients } from './pages/Clients';
 import { Gallery } from './pages/Gallery';
 import { Contact } from './pages/Contact';
 import { Certificates } from './pages/Certificates';
+import { QuoteModal } from './components/QuoteModal';
 
 const ScrollProgress = () => {
   const { scrollYProgress } = useScroll();
@@ -56,6 +57,16 @@ const AnimatedRoutes = () => {
 };
 
 export default function App() {
+  const [isAutoPopupOpen, setIsAutoPopupOpen] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsAutoPopupOpen(true);
+    }, 2000); // Show popup after 2 seconds
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <Router>
       <div className="min-h-screen selection:bg-accent selection:text-white flex flex-col">
@@ -69,6 +80,11 @@ export default function App() {
         <Footer />
         <BackToTop />
         <FloatingButtons />
+        <QuoteModal 
+          isOpen={isAutoPopupOpen} 
+          onClose={() => setIsAutoPopupOpen(false)} 
+          title="Welcome! Get a Free Quote"
+        />
       </div>
     </Router>
   );

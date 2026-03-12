@@ -8,52 +8,52 @@ import {
 
 const services = [
   {
-    icon: <FaVideo />,
+    image: 'https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&q=80&w=800',
     title: 'CCTV Systems',
     desc: 'High-definition surveillance with remote monitoring and AI analytics.',
   },
   {
-    icon: <FaFireExtinguisher />,
+    image: 'https://images.unsplash.com/photo-1582139329536-e7284fece509?auto=format&fit=crop&q=80&w=800',
     title: 'Fire Alarm Panels',
     desc: 'Early detection and rapid response systems for fire emergencies.',
   },
   {
-    icon: <FaFingerprint />,
+    image: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=800',
     title: 'Access Control',
     desc: 'Biometric and smart card solutions for secure entry management.',
   },
   {
-    icon: <FaVolumeUp />,
+    image: 'https://images.unsplash.com/photo-1551808525-51a94da548ce?auto=format&fit=crop&q=80&w=800',
     title: 'PA Systems',
     desc: 'Public announcement systems for clear communication and alerts.',
   },
   {
-    icon: <FaTint />,
+    image: 'https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?auto=format&fit=crop&q=80&w=800',
     title: 'Water Leakage',
     desc: 'Advanced sensors to detect and alert water leaks in critical areas.',
   },
   {
-    icon: <FaWind />,
+    image: 'https://th.bing.com/th/id/OIP.GyZjjTDMCCJlZRvG_Q1FjAHaHa?w=173&h=180&c=7&r=0&o=7&dpr=1.8&pid=1.7&rm=3',
     title: 'VESDA Systems',
     desc: 'Very Early Smoke Detection Apparatus for high-sensitivity areas.',
   },
   {
-    icon: <FaBiohazard />,
+    image: 'https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&q=80&w=800',
     title: 'Gas Suppression',
     desc: 'Automated gas-based fire extinguishing for server rooms.',
   },
   {
-    icon: <FaBug />,
+    image: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&q=80&w=800',
     title: 'Rodent Systems',
     desc: 'Ultrasonic pest repellent systems for sensitive equipment.',
   },
   {
-    icon: <FaLaptopCode />,
+    image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&q=80&w=800',
     title: 'IT & Management',
     desc: 'Comprehensive IT infrastructure and security management.',
   },
   {
-    icon: <FaBuilding />,
+    image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=800',
     title: 'BMS Systems',
     desc: 'Smart Building Management Systems for integrated control.',
   },
@@ -65,25 +65,29 @@ const ServiceCard = ({ service, index }: { service: any, index: number }) => {
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ delay: index * 0.1 }}
-      whileHover={{ y: -10, rotateX: 5, rotateY: 5 }}
+      whileHover={{ y: -10 }}
       whileTap={{ scale: 0.95 }}
-      className="glass-card p-8 rounded-3xl group cursor-pointer relative overflow-hidden"
+      className="glass-card rounded-3xl group cursor-pointer relative overflow-hidden flex flex-col h-full"
     >
-      <div className="absolute top-0 right-0 w-32 h-32 bg-accent/10 rounded-full -mr-16 -mt-16 blur-3xl group-hover:bg-accent/20 transition-all" />
-      
-      <div className="w-14 h-14 bg-accent/20 rounded-2xl flex items-center justify-center text-2xl text-accent mb-6 group-hover:bg-accent group-hover:text-white transition-all duration-300">
-        {service.icon}
+      <div className="aspect-[4/3] overflow-hidden">
+        <img 
+          src={service.image} 
+          alt={service.title} 
+          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" 
+        />
       </div>
       
-      <h3 className="text-xl font-display font-bold mb-4 group-hover:text-accent transition-colors">
-        {service.title}
-      </h3>
-      <p className="text-white/60 text-sm leading-relaxed">
-        {service.desc}
-      </p>
-      
-      <div className="mt-8 flex items-center gap-2 text-accent text-xs font-bold uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-all">
-        Learn More <span>→</span>
+      <div className="p-6 flex flex-col flex-grow">
+        <h3 className="text-xl font-display font-bold mb-3 group-hover:text-accent transition-colors">
+          {service.title}
+        </h3>
+        <p className="text-white/60 text-sm leading-relaxed mb-6">
+          {service.desc}
+        </p>
+        
+        <div className="mt-auto flex items-center gap-2 text-accent text-xs font-bold uppercase tracking-widest">
+          Learn More <span>→</span>
+        </div>
       </div>
     </motion.div>
   );

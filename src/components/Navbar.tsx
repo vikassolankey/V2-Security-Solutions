@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence, useScroll, useMotionValueEvent } from 'framer-motion';
-import { FaShieldAlt, FaBars, FaTimes, FaInstagram, FaFacebook, FaPinterest, FaYoutube, FaTwitter, FaLinkedin } from 'react-icons/fa';
+import { FaShieldAlt, FaBars, FaTimes } from 'react-icons/fa';
 import { NavLink, Link } from 'react-router-dom';
 import { cn } from '../lib/utils';
+import { QuoteModal } from './QuoteModal';
 
 const navLinks = [
   { name: 'Home', href: '/' },
@@ -17,6 +18,7 @@ export const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isHidden, setIsHidden] = useState(false);
+  const [isQuoteModalOpen, setIsQuoteModalOpen] = useState(false);
   const { scrollY } = useScroll();
 
   useMotionValueEvent(scrollY, "change", (latest) => {
@@ -63,15 +65,20 @@ export const Navbar = () => {
             <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-accent transition-all duration-300 group-hover:w-full" />
           </NavLink>
         ))}
-        <div className="flex items-center gap-4">
-          <a href="#" target="_blank" rel="noopener noreferrer" className="text-white/80 hover:text-white transition-colors"><FaInstagram /></a>
-          <a href="#" target="_blank" rel="noopener noreferrer" className="text-white/80 hover:text-white transition-colors"><FaFacebook /></a>
-          <a href="#" target="_blank" rel="noopener noreferrer" className="text-white/80 hover:text-white transition-colors"><FaPinterest /></a>
-          <a href="#" target="_blank" rel="noopener noreferrer" className="text-white/80 hover:text-white transition-colors"><FaYoutube /></a>
-          <a href="#" target="_blank" rel="noopener noreferrer" className="text-white/80 hover:text-white transition-colors"><FaTwitter /></a>
-          <a href="#" target="_blank" rel="noopener noreferrer" className="text-white/80 hover:text-white transition-colors"><FaLinkedin /></a>
-        </div>
+        <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+          <button 
+            onClick={() => setIsQuoteModalOpen(true)}
+            className="bg-accent hover:bg-red-700 text-white px-6 py-2 rounded-full text-sm font-bold transition-all shadow-lg shadow-accent/20 block"
+          >
+            Get Quote
+          </button>
+        </motion.div>
       </div>
+
+      <QuoteModal 
+        isOpen={isQuoteModalOpen} 
+        onClose={() => setIsQuoteModalOpen(false)} 
+      />
 
       {/* Mobile Toggle */}
       <button className="md:hidden text-2xl" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>

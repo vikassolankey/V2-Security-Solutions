@@ -1,34 +1,9 @@
-import React, { useState, useRef } from 'react';
-import emailjs from 'emailjs-com';
+import React from 'react';
 import { motion } from 'framer-motion';
-import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope, FaCheckCircle, FaExclamationCircle } from 'react-icons/fa';
+import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope } from 'react-icons/fa';
+import { QuoteForm } from './QuoteForm';
 
 export const Contact = () => {
-  const form = useRef<HTMLFormElement>(null);
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submissionStatus, setSubmissionStatus] = useState<{ success: boolean; message: string } | null>(null);
-
-  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-
-    emailjs.sendForm(
-      (import.meta as any).env.VITE_EMAILJS_SERVICE_ID,
-(import.meta as any).env.VITE_EMAILJS_TEMPLATE_ID,
-      form.current!,
-(import.meta as any).env.VITE_EMAILJS_USER_ID
-    )
-    .then((result) => {
-        setSubmissionStatus({ success: true, message: 'Message sent successfully! We will get back to you shortly.' });
-        form.current?.reset();
-    }, (error) => {
-        setSubmissionStatus({ success: false, message: 'Failed to send message. Please try again later.' });
-    })
-    .finally(() => {
-      setIsSubmitting(false);
-    });
-  };
-
   return (
     <section id="contact" className="py-24 bg-secondary/20">
       <div className="max-w-7xl mx-auto px-4 md:px-12">
@@ -40,46 +15,7 @@ export const Contact = () => {
             <span className="text-accent font-bold tracking-[0.3em] uppercase text-sm mb-4 block">Get In Touch</span>
             <h2 className="text-4xl md:text-5xl font-display font-bold mb-8">Let's Secure Your Future</h2>
             
-            <form ref={form} onSubmit={sendEmail} className="space-y-6">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <input
-                  type="text"
-                  name="name"
-                  placeholder="Your Name"
-                  required
-                  className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 focus:outline-none focus:border-accent transition-colors"
-                />
-                <input
-                  type="email"
-                  name="email"
-                  placeholder="Email Address"
-                  required
-                  className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 focus:outline-none focus:border-accent transition-colors"
-                />
-              </div>
-              <input
-                type="tel"
-                name="phone"
-                placeholder="Phone Number"
-                className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 focus:outline-none focus:border-accent transition-colors"
-              />
-              <textarea
-                name="message"
-                placeholder="Your Message"
-                rows={5}
-                required
-                className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 focus:outline-none focus:border-accent transition-colors resize-none"
-              />
-              <button type="submit" disabled={isSubmitting} className="w-full bg-accent hover:bg-red-700 text-white font-bold py-5 rounded-2xl transition-all hover:scale-[1.02] active:scale-[0.98] disabled:bg-gray-500 disabled:cursor-not-allowed">
-                {isSubmitting ? 'Sending...' : 'Send Message'}
-              </button>
-              {submissionStatus && (
-                <div className={`mt-4 p-4 rounded-2xl flex items-center gap-4 ${submissionStatus.success ? 'bg-green-500/20 text-green-300' : 'bg-red-500/20 text-red-300'}`}>
-                  {submissionStatus.success ? <FaCheckCircle /> : <FaExclamationCircle />}
-                  <span>{submissionStatus.message}</span>
-                </div>
-              )}
-            </form>
+            <QuoteForm />
           </motion.div>
 
           <motion.div
@@ -95,7 +31,7 @@ export const Contact = () => {
                 <div>
                   <h4 className="text-xl font-display font-bold mb-2">Our Location</h4>
                   <p className="text-white/60 leading-relaxed">
-                          <span> House No 116 Ground Floor V2 Security Solutions Nearby Kajal Tailor Or Jai Hind Public School Street Number 3 Surya Vihar Part II Sector 91 Faridabad Haryana 121013 India</span>
+                          <span> House No 116 Ground Floor V2 Security Solutions Nearby Kajal Tailor Or Jai Hind Public School Street Number 3 Surya Vihar Part III Sector 91 Faridabad Haryana 121013 India</span>
 
                   </p>
                 </div>
@@ -124,7 +60,7 @@ export const Contact = () => {
 
             <div className="mt-12 h-64 w-full rounded-3xl overflow-hidden border border-white/10 grayscale hover:grayscale-0 transition-all duration-500">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d112334.2353381617!2d77.23668102353148!3d28.37560018511746!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cdc15f5a42427%3A0xec0669222471960!2sFaridabad%2C%20Haryana!5e0!3m2!1sen!2sin!4v1710200000000!5m2!1sen!2sin"
+                src="https://www.google.com/maps?q=V2%20Security%20Solutions%20Surya%20Vihar%20Faridabad&output=embed"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
