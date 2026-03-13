@@ -69,7 +69,7 @@ export default function App() {
 
   return (
     <Router>
-      <div className="min-h-screen selection:bg-accent selection:text-white flex flex-col">
+      <div className="min-h-screen selection:bg-accent selection:text-white flex flex-col overflow-x-hidden">
         <ScrollProgress />
         <ScrollToTop />
         <TopHeader />

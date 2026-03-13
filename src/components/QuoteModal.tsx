@@ -25,7 +25,7 @@ export const QuoteModal: React.FC<QuoteModalProps> = ({ isOpen, onClose, title =
             initial={{ opacity: 0, scale: 0.9, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.9, y: 20 }}
-            className="relative w-full max-w-2xl bg-secondary border border-white/10 rounded-3xl p-8 md:p-12 shadow-2xl overflow-hidden"
+            className="relative w-full max-w-2xl bg-secondary border border-white/10 rounded-3xl p-8 md:p-12 shadow-2xl overflow-y-auto"
           >
             <div className="absolute top-0 right-0 w-32 h-32 bg-accent/10 rounded-full -mr-16 -mt-16 blur-3xl" />
             
