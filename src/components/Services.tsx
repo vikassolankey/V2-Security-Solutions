@@ -8,42 +8,42 @@ import {
 
 const services = [
   {
-    image: 'https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&q=80&w=800',
+    image: 'https://tse1.mm.bing.net/th/id/OIP.tgk2NT5MSKxmwQNbYEbKjwHaFF?rs=1&pid=ImgDetMain&o=7&rm=3',
     title: 'CCTV Systems',
     desc: 'High-definition surveillance with remote monitoring and AI analytics.',
   },
   {
-    image: 'https://images.unsplash.com/photo-1582139329536-e7284fece509?auto=format&fit=crop&q=80&w=800',
+    image: 'https://wallpaperaccess.com/full/9227700.jpg',
     title: 'Fire Alarm Panels',
     desc: 'Early detection and rapid response systems for fire emergencies.',
   },
   {
-    image: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=800',
+    image: 'https://tse4.mm.bing.net/th/id/OIP.vjvMg0iXoTclZZzO60qxNAHaEK?rs=1&pid=ImgDetMain&o=7&rm=3',
     title: 'Access Control',
     desc: 'Biometric and smart card solutions for secure entry management.',
   },
   {
-    image: 'https://images.unsplash.com/photo-1551808525-51a94da548ce?auto=format&fit=crop&q=80&w=800',
+    image: 'https://tse1.mm.bing.net/th/id/OIP.R0S1dSnA_btePIcbsiibbQHaHa?w=720&h=720&rs=1&pid=ImgDetMain&o=7&rm=3',
     title: 'PA Systems',
     desc: 'Public announcement systems for clear communication and alerts.',
   },
   {
-    image: 'https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?auto=format&fit=crop&q=80&w=800',
+    image: 'https://tse4.mm.bing.net/th/id/OIP.iP8URGGonO-fsTP_3t2e7AHaE8?rs=1&pid=ImgDetMain&o=7&rm=3',
     title: 'Water Leakage',
     desc: 'Advanced sensors to detect and alert water leaks in critical areas.',
   },
   {
-    image: 'https://th.bing.com/th/id/OIP.GyZjjTDMCCJlZRvG_Q1FjAHaHa?w=173&h=180&c=7&r=0&o=7&dpr=1.8&pid=1.7&rm=3',
+    image: 'https://5.imimg.com/data5/GLADMIN/Default/2023/2/UY/HF/NZ/7452620/vesda-faast-aspirating-smoke-detector-1000x1000.jpg',
     title: 'VESDA Systems',
     desc: 'Very Early Smoke Detection Apparatus for high-sensitivity areas.',
   },
   {
-    image: 'https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&q=80&w=800',
+    image: 'https://th.bing.com/th/id/OIP.pOwGF1HsKF81M3_aOJjRQAHaE8?o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3',
     title: 'Gas Suppression',
     desc: 'Automated gas-based fire extinguishing for server rooms.',
   },
   {
-    image: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&q=80&w=800',
+    image: 'https://tse3.mm.bing.net/th/id/OIP.n4S1-eSxQn4jxw-P25mrDwHaEO?w=1006&h=575&rs=1&pid=ImgDetMain&o=7&rm=3',
     title: 'Rodent Systems',
     desc: 'Ultrasonic pest repellent systems for sensitive equipment.',
   },
@@ -53,7 +53,7 @@ const services = [
     desc: 'Comprehensive IT infrastructure and security management.',
   },
   {
-    image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=800',
+    image: 'https://tse1.mm.bing.net/th/id/OIP.DCyvSzxvrb2AD4BiMzrqgQHaEK?w=768&h=431&rs=1&pid=ImgDetMain&o=7&rm=3',
     title: 'BMS Systems',
     desc: 'Smart Building Management Systems for integrated control.',
   },

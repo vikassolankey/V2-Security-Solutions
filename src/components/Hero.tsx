@@ -17,15 +17,27 @@ const slides = [
     subtitle: '24/7 Surveillance with AI-powered threat detection for maximum safety.',
   },
   {
-    image: 'https://images.unsplash.com/photo-1582139329536-e7284fece509?auto=format&fit=crop&q=80&w=1920',
+    image: 'https://wallpaperaccess.com/full/9227651.jpg',
     title: 'Fire Safety Systems',
     subtitle: 'State-of-the-art fire detection and suppression for your peace of mind.',
   },
   {
-    image: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=1920',
+    image: 'https://technoeyenet.com/wp-content/uploads/2020/02/access-control-pic.jpg',
     title: 'Integrated Access Control',
     subtitle: 'Manage and monitor entry points with biometric and smart card solutions.',
   },
+  {
+    image: 'https://img.freepik.com/premium-photo/mouse-christmas-tree_865091-1078.jpg',
+    title: 'Rodent Systems',
+    subtitle: 'Ultrasonic pest repellent systems for sensitive equipment.',
+  },
+    {
+    image: 'https://t3.ftcdn.net/jpg/07/72/84/88/360_F_772848831_iCrKrMZpJjsZfzanbRDl16Byf5rxTFHg.jpg',
+    title: 'Gas Suppression',
+    subtitle: 'Automated gas-based fire extinguishing for server rooms.',
+  },
+
+
 ];
 
 export const Hero = () => {
